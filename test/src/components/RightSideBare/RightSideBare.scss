@@ -1,0 +1,176 @@
+@import "../../Variables.scss";
+.Right__SideBare{
+    height: 100vh;
+    width: 20vw;
+    background-color: $Bg-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &-allBets{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-oneBet{
+        display: flex;
+        // flex-direction: row;
+        // align-content: space-between;
+        justify-content: space-around;
+        
+        
+        // align-items: center;
+        &-buttonGap{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:1rem
+        }
+    }
+    &-betOdd{
+        justify-content: center;
+    height: 2rem;
+    width: 3.5rem;
+    background-color: $Grey-color;
+    color: white;
+    border-radius: 5px;
+    &:hover{
+        background-color: $DarkGrey-color;
+    }
+    }
+    &-ticket{
+        // height: 20vh;
+        background-color: $DarkerGrey-color;
+        border-radius: 15px;
+        padding: 3% 7%; 
+        &-dotted{
+            margin-top: 7%;
+            padding: 3% 7% ;
+            border-bottom: 3px dotted $Bg-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        &-bet{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center;
+            margin: 1rem 0;
+            &-submit{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+                &-button{
+                    width: 100%;
+                    background-color: #2c5140;
+                    font-size: larger;
+                    text-transform: capitalize;
+                    color: $white;
+                    font-weight: 600;
+                    font-family: sans-serif;
+                    border: none;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+                &-check{
+                    display: flex;
+                    flex-direction: row;
+                    justify-items: center;
+                    align-items: center;
+                    cursor: pointer;
+                    gap:1rem
+                }
+            }
+        }
+        &-header{
+            font-size: larger;
+            text-transform: capitalize;
+            color: $white;
+            font-weight: 600;
+            font-family: sans-serif;
+            &-count{
+                background-color: red;
+                border: none;
+                padding: 1% 3%;
+                border-radius: 50%;
+            }
+        }
+    }
+    &-buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &-row{
+        font-size: medium;
+        text-transform: capitalize;
+        color: $Grey-color;
+        font-weight: 600;
+        font-family: sans-serif;  
+        border: none;
+        padding: 0.4em 2em;
+        text-align: center;
+        color: $Grey-color;
+        background: $DarkGrey-color;
+        border-radius: 40px;
+            &:hover{
+                background-color: $Bg-color;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.check{
+    width: 50px;
+    font-size: x-large;
+    color: #2c5140;
+}
+.clear{
+    cursor: pointer;
+    align-self: center;
+}
+span{
+    font-size: small;
+    font-weight: 100;
+}
+
+.bet__header{
+    font-size: medium;
+    color: $Grey-color;
+    &-odds{
+        color: $white;
+        font-size: x-large;
+        font-weight: bold;
+    }
+    &-min{
+        font-size: small;
+        color: $Grey-color;
+    }
+}
+
+input{
+    background-color: black;
+    color: $white;
+    width: 65%;
+    height: 1.2rem;
+    padding:0.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: large;
+    direction: RTL;
+}
+
+// hr {
+//     margin: 0;
+//     border: none;
+//     border-top: 3px dotted #000000;
+//     // color: #fff;
+//     // background-color: #fff;
+//     height: 1px;
+//     width: 100%;
+//   }

@@ -1,0 +1,63 @@
+@import "../../Variables.scss";
+.Tournement{
+    height: 100vh;
+    width: 60vw;
+    background-color: $Bg-color;
+    overflow-y: scroll;
+    &-matches{
+        padding: 0rem 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+        &-heads{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            gap: 5rem;
+            margin-right: 7.2rem;
+            &-numbers{
+                font-size: large;
+            font-weight: bold;
+            color: $DarkGrey-color;
+            }
+        }
+        &:hover{
+            background-color: $Grey-color;
+        }
+        &-gap{
+            display: flex;
+            flex-direction: row;
+            justify-items: center;
+            align-items: center;
+            gap:2rem;
+            &-col{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                
+
+            }
+        }
+    }
+}
+.bet-choise{
+    justify-content: center;
+    height: 2rem;
+    width: 3.5rem;
+    background-color: $Grey-color;
+    color: white;
+    border-radius: 5px;
+    &:hover{
+        background-color: $DarkGrey-color;
+    }
+}
+
+p{
+    color: white;
+    // line-height:10pc;
+    font-size: smaller;
+    
+}

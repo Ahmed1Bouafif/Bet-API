@@ -1,0 +1,89 @@
+@import "../../Variables.scss";
+.Left__SideBare{
+    height: 100vh;
+    width: 20vw;
+    background-color: $DarkerGrey-color;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    overflow-y: scroll; 
+     
+}
+.All__Sports{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    font-size: x-large;
+    text-transform: capitalize;
+    color: $DarkGrey-color;
+    padding: 1.5rem 0.8rem 0rem 1.5rem ;
+    &-color {
+        color: $Grey-color;
+        font-weight: 600;
+    }
+    &-toggle-color{
+        color: $white;
+        font-size: small;
+    }
+}
+.Sport__Type{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 1.1rem 0.8rem 0rem 2rem ;
+    cursor: pointer;
+    &-flags{
+        border-radius: 50%;
+    }
+    &-gap{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:1rem;
+        cursor: pointer;
+        &-matches{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-items: center;
+        }
+    }
+    &-matches{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+        padding: 0.4rem 0.8rem 0rem 4rem ;
+        &-hide{
+            display: none;
+        }
+    }
+    &-C-color{
+        font-size: medium;
+        text-transform: capitalize;
+        color: $Grey-color;
+        font-weight: 600;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    &-N-color{
+        font-size: larger;
+        text-transform: capitalize;
+        color: $Grey-color;
+        font-weight: 600;
+        font-family: sans-serif
+    }
+    
+}
+
+.Sport__logo{
+    width: 3rem;
+    height: 2rem;
+}
+.bob{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
