@@ -6,7 +6,7 @@ import { faToggleOn, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const RightSideBare = () => {
   const bets = useSelector((state) => state.bet);
-
+  const [betValue, setBetValue] = useState(0);
   const [tickets, settickets] = useState([]);
   // useLayoutEffect(() => {
   //   settickets(bets);
@@ -24,7 +24,7 @@ const RightSideBare = () => {
     <div className="Right__SideBare">
       <div className="Right__SideBare-ticket Right__SideBare-ticket-dotted">
         <p className="Right__SideBare-ticket-header">
-          Tickets <span className="Right__SideBare-ticket-header-count">4</span>
+          Tickets <span className="Right__SideBare-ticket-header-count">{tickets.length}</span>
         </p>
         <div className="Right__SideBare-buttons">
           <button className="Right__SideBare-buttons-row">Single</button>
@@ -52,13 +52,13 @@ const RightSideBare = () => {
             Bet <br /> <span className="bet__header-min">min: 1 EUR</span>
           </p>
           {/* <span class="input-symbol-euro"> */}
-          <input type="text" />
+          <input type="text" onChange={(e) => setBetValue(e.target.value)} />
           {/* </span> */}
         </div>
         <div className="Right__SideBare-ticket-bet-submit">
           <button className="Right__SideBare-ticket-bet-submit-button">
             <p>
-              PLACE BET <br /> <span>Potencial Win: 80 EUR</span>{" "}
+              PLACE BET <br /> <span>Potencial Win: {(Number(betValue) * Number(tickets.reduce((accumulator, current) => accumulator * current.Header.MaxOveralOdds, 1).toFixed(2))).toFixed(2)} EUR</span>{" "}
             </p>
           </button>
           <div className="Right__SideBare-ticket-bet-submit-check">
