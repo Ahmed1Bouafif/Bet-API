@@ -76,9 +76,9 @@ const Tournement = () => {
                 </div>
               </div>
               <div className="Tournement-matches-gap">
-                {u.Markets[50].map((e) => (
+                {u.Markets[Object.keys(u.Markets)[0]].map((e, i) => (
                   <>
-                    <button onClick={() => fetchMenu(Number(e.Id))} className="bet-choise">
+                    <button key={i} onClick={() => fetchMenu(Number(e.Id))} className="bet-choise">
                       {e.OddsValue}
                     </button>
                   </>
